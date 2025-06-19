@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     modalTitle() {
-      return this.editing ? 'Edit Employee' : 'Add Employee';
+      return this.editing ? 'Editar Funcionário' : 'Adicionar Funcionário';
     },
     buttonLabel() {
       return this.editing ? 'Update' : 'Save';
@@ -88,7 +88,7 @@ export default {
 
 <template>
     <div class="container mt-3">
-        <button @click="showModal(null)" class="btn btn-primary">Adicionar</button>
+        <button @click="showModal(null)" class="btn btn-primary" style="float: right;">Adicionar</button>
         <table class="table table-stripped mt-3">
             <thead>
                 <tr>

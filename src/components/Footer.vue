@@ -20,9 +20,9 @@
     <div class="links">
       <h4>Links úteis</h4>
       <ul class="footer-ul">
-        <li><a href="/sobre">Sobre</a></li>
-        <li><a href="/contato">Contato</a></li>
-        <li><a href="/privacidade">Privacidade</a></li>
+        <li><a class="ancora-links" href="/sobre">Sobre</a></li>
+        <li><a class="ancora-links" href="/contato">Contato</a></li>
+        <li><a class="ancora-links" href="/privacidade">Privacidade</a></li>
       </ul>
     </div>
     <div>
@@ -63,18 +63,28 @@
     }
 
     .footer-ul:hover {
-    background-color: #666666;
-    color: #F8FAFC;
+        background-color: #666666;
+        color: #F8FAFC;
+    }
+
+    .ancora-links{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .ancora-links:hover{
+        color: #F8FAFC;
     }
 
     .social-midia, a{
-        margin-right: 20px;
+        margin-right: 30px;
         display: flex;
         flex-direction: column;
         text-decoration: none;
         color: #333333;
         cursor: pointer;
     }
+
     .direitos{
         text-align: center;
         margin-top: 2rem;

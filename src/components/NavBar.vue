@@ -20,10 +20,10 @@
 
         <div class="lista">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Clientes</a></li>
-                <li><a href="#">Manutenções</a></li>
-                <li><a href="#">Funcionarios</a></li>
+                <li><RouterLink class="ancora-nav" to="/">Home</RouterLink></li>
+                <li><RouterLink class="ancora-nav" to="/customer">Clientes</RouterLink></li>
+                <li><RouterLink class="ancora-nav" to="/maintenance">Manutenções</RouterLink></li>
+                <li><RouterLink class="ancora-nav" to="/employee">Funcionarios</RouterLink></li>
             </ul>
         </div>
     </nav>
@@ -56,6 +56,8 @@
     }
 
     li {
+        align-items: center;
+        text-align: center;
         padding: 10px;
         margin-bottom: 5px;
         border: 1px solid #333333;
@@ -63,9 +65,17 @@
         cursor: pointer;
     }
 
-    li:hover {
+    li:hover{
     background-color: #666666;
     color: #F8FAFC;
+    }
+    .ancora-nav
+    {
+        margin: 0;
+        padding: 0;
+    }
+    .ancora-nav:hover{
+        color: #F8FAFC;
     }
 
 </style>

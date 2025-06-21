@@ -1,12 +1,12 @@
 <script >
   import NavBar from './components/NavBar.vue';
-  import EmployeeComponent from './components/EmployeeComponent.vue';
+  // import EmployeeComponent from './components/EmployeeComponent.vue';
   import Footer from './components/Footer.vue';
 
   export default {
     name: 'App',
     components:{
-      EmployeeComponent,
+      // EmployeeComponent,
       NavBar,
       Footer
     }
@@ -16,8 +16,12 @@
 <template>
   <div id="app">
     <NavBar/>
-    <EmployeeComponent/>
+        <div class="container mt-4">
+      <router-view />
+    </div>
     <Footer/>
+
+
   </div>
 </template>
 

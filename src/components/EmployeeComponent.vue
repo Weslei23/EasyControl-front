@@ -87,6 +87,7 @@ export default {
 </script>
 
 <template>
+  <main>
     <div class="container mt-3">
         <button @click="showModal(null)" class="btn btn-primary" style="float: right;">Adicionar</button>
         <table class="table table-stripped mt-3">
@@ -146,4 +147,5 @@ export default {
             </div>
         </div>
     </div>
+  </main>
 </template>

@@ -11,8 +11,6 @@ Frontend desenvolvido em **Vue.js** para o sistema de controle de manutenções 
 
 ## 📸 Captura de Tela
 
-> *(Adicione um print da interface principal do sistema)*
-
 ![Screenshot da interface](./public/screenshot-home.png)
 
 ---
@@ -30,10 +28,10 @@ Frontend desenvolvido em **Vue.js** para o sistema de controle de manutenções 
 
 ## 🧰 Tecnologias
 
-- Vue 3 + Composition API
+- Vue 3
 - Vue Router
 - Axios
-- Tailwind CSS *(ou Bootstrap, conforme o projeto)*
+- Bootstrap
 - Vite
 - Font Awesome / Lucide Icons
 

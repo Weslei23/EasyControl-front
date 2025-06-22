@@ -18,22 +18,20 @@
         <p>Controle e manutenção com eficiência.</p>
     </div>
     <div class="links">
-      <h4>Links úteis</h4>
-      <ul class="footer-ul">
-        <li><a class="ancora-links" href="/sobre">Sobre</a></li>
-        <li><a class="ancora-links" href="/contato">Contato</a></li>
-        <li><a class="ancora-links" href="/privacidade">Privacidade</a></li>
-      </ul>
+        <h4>Links úteis</h4>
+        <a class="ancora-links" href="/sobre">Sobre</a>
+        <a class="ancora-links" href="/contato">Contato</a>
+        <a class="ancora-links" href="/privacidade">Privacidade</a>
     </div>
     <div>
-      <h4>Contato</h4>
-      <p>Email: contato@easycontrol.com</p>
-      <p>Telefone: (11) 99999-9999</p>
+        <h4>Contato</h4>
+        <p>Email: contato@easycontrol.com</p>
+        <p>Telefone: (11) 99999-9999</p>
     </div>
     <div class="social-midia">
-      <h4>Siga-nos</h4>
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
+        <h4>Siga-nos</h4>
+        <a class="social-midia-links" href="#">Instagram</a>
+        <a class="social-midia-links" href="#">LinkedIn</a>
     </div>
   </div>
   <p class="direitos">© 2025 EasyControl. Todos os direitos reservados.</p>
@@ -44,7 +42,6 @@
     .footer{
         background: #f5f5f5;
         padding: 2rem;
-        color: #333;
     }
 
     .container-global{
@@ -58,31 +55,41 @@
     }
     .footer-ul{
         list-style: none;
-        padding: 0;
-        display: inline;
-    }
-
-    .footer-ul:hover {
-        background-color: #666666;
-        color: #F8FAFC;
-    }
-
-    .ancora-links{
-        margin: 0px;
         padding: 0px;
+        display: inline;
+        margin: 0px;
     }
 
-    .ancora-links:hover{
-        color: #F8FAFC;
-    }
-
-    .social-midia, a{
+    .links {
         margin-right: 30px;
         display: flex;
         flex-direction: column;
+        color: #333333;
+    }
+    .ancora-links{
+        cursor: pointer;
         text-decoration: none;
         color: #333333;
+    }
+
+    .ancora-links:hover{
+        text-decoration: underline;
+    }
+
+    .social-midia{
+        margin-right: 30px;
+        display: flex;
+        flex-direction: column;
+        color: #333333;
+    }
+    .social-midia-links{
         cursor: pointer;
+        text-decoration: none;
+        color: #333333;
+    }
+    
+    .social-midia-links:hover{
+        text-decoration: underline;
     }
 
     .direitos{

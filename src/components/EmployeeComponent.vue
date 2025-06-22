@@ -22,7 +22,7 @@ export default {
       return this.editing ? 'Editar Funcionário' : 'Adicionar Funcionário';
     },
     buttonLabel() {
-      return this.editing ? 'Update' : 'Save';
+      return this.editing ? 'Alterar' : 'Salvar';
     }
   },
   methods: {

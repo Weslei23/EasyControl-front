@@ -1,7 +1,12 @@
 <script>
-    export default {
-    name: 'NavBar',
-    }
+import { RouterLink } from 'vue-router'
+
+export default {
+  name: 'NavBar',
+  components: {
+    RouterLink
+  }
+}
 </script>
 
 <template>
@@ -19,11 +24,11 @@
         </div>
 
         <div class="lista">
-            <ul>
-                <li><RouterLink class="ancora-nav" to="/">Home</RouterLink></li>
-                <li><RouterLink class="ancora-nav" to="/customer">Clientes</RouterLink></li>
-                <li><RouterLink class="ancora-nav" to="/maintenance">Manutenções</RouterLink></li>
-                <li><RouterLink class="ancora-nav" to="/employee">Funcionarios</RouterLink></li>
+            <ul class="nav-ul">
+                <li class="nav-li"><RouterLink class="ancora-nav" to="/">Home</RouterLink></li>
+                <li class="nav-li"><RouterLink class="ancora-nav" to="/customer">Clientes</RouterLink></li>
+                <li class="nav-li"><RouterLink class="ancora-nav" to="/maintenance">Manutenções</RouterLink></li>
+                <li class="nav-li"><RouterLink class="ancora-nav" to="/employee">Funcionarios</RouterLink></li>
             </ul>
         </div>
     </nav>
@@ -47,7 +52,7 @@
         display: flex;
     }
 
-    ul {
+    .nav-ul {
     list-style: none;
     padding: 0 40px;
     gap: 20px;
@@ -55,7 +60,7 @@
     margin: 0;
     }
 
-    li {
+    .nav-li {
         align-items: center;
         text-align: center;
         padding: 10px;
@@ -69,10 +74,13 @@
     background-color: #666666;
     color: #F8FAFC;
     }
+    
     .ancora-nav
     {
         margin: 0;
         padding: 0;
+        text-decoration: none;
+        color: #333333;
     }
     .ancora-nav:hover{
         color: #F8FAFC;

@@ -97,8 +97,7 @@ export default {
       this.editing = false;
     },
     formatDate(dateStr) {
-      const date = new Date(dateStr);
-      return date.toLocaleDateString('pt-BR');
+      return new Date(dateStr).toLocaleDateString('pt-BR');
     }
   },
   mounted() {

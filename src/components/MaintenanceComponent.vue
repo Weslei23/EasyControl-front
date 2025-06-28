@@ -2,7 +2,8 @@
 import { Modal } from 'bootstrap';
 import MaintenanceService from '../services/MaintenanceService.js';
 
-export default {
+export default 
+{
   data() {
     return {
       maintenances: [],
@@ -98,13 +99,13 @@ export default {
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>Data</th>
+            <th>Criado em</th>
             <th>Status</th>
             <th>Tipo</th>
             <th>Serviço</th>
             <th>Cliente</th>
             <th>Funcionário</th>
-            <th>Criado em</th>
+            <th>Agendado em</th>
             <th>Ações</th>
           </tr>
         </thead>
@@ -118,8 +119,10 @@ export default {
             <td>{{ m.employeeName }}</td>
             <td>{{ formatDate(m.createdAt) }}</td>
             <td>
-              <button class="btn btn-warning btn-sm" @click="showModal(m)">Editar</button>
-              <button class="btn btn-danger btn-sm" @click="deleteMaintenance(m.id)">Excluir</button>
+              <div class="btn-container">
+                <button class="btn btn-warning btn-sm" @click="showModal(m)">Editar</button>
+                <button class="btn btn-danger btn-sm" @click="deleteMaintenance(m.id)">Excluir</button>
+              </div>
             </td>
           </tr>
         </tbody>

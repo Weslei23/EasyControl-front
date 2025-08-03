@@ -1,12 +1,17 @@
 <script>
 import { Modal } from 'bootstrap';
 import MaintenanceService from '../services/MaintenanceService.js';
+import CustomerService from '../services/CustomerService.js';
+import EmployeeService from '../services/EmployeeService.js';
+
 
 export default 
 {
   data() {
     return {
       maintenances: [],
+      customers: [],
+      employees: [],
       maintenanceForm: {
         scheduledDate: '',
         statusModel: 'ABERTO',
@@ -81,12 +86,24 @@ export default
         this.maintenances = res.data;
       });
     },
+    loadCustomers() {
+      CustomerService.getCustomers().then(res => {
+        this.customers = res.data;
+      });
+    },
+    loadEmployees() {
+      EmployeeService.getEmployees().then(res => {
+        this.employees = res.data;
+      });
+    },
     formatDate(dateStr) {
       return new Date(dateStr).toLocaleDateString('pt-BR');
     }
   },
   mounted() {
     this.loadMaintenances();
+    this.loadCustomers();
+    this.loadEmployees();
   }
 };
 </script>
@@ -94,18 +111,18 @@ export default
 <template>
   <main>
     <div class="container mt-3">
-      <button class="btn btn-primary mb-3 float-end" @click="showModal(null)">Nova Manutenção</button>
+      <button class="btn btn-primary mb-3 float-end" @click="showModal(null)">Cadastrar Manutenção</button>
 
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>Criado em</th>
+            <th>Data de Cadastro</th>
             <th>Status</th>
             <th>Tipo</th>
-            <th>Serviço</th>
+            <th>Descrição</th>
             <th>Cliente</th>
-            <th>Funcionário</th>
-            <th>Agendado em</th>
+            <th>Responsável</th>
+            <th>Agendado para</th>
             <th>Ações</th>
           </tr>
         </thead>
@@ -165,12 +182,22 @@ export default
                     <textarea class="form-control" v-model="maintenanceForm.descriptionService" required></textarea>
                   </div>
                   <div class="col-md-6">
-                    <label>ID do Cliente</label>
-                    <input type="text" class="form-control" v-model="maintenanceForm.customerId" required />
+                    <label>Cliente</label>
+                    <select class="form-control" v-model="maintenanceForm.customerId" required>
+                      <option disabled value="">Selecione um cliente</option>
+                      <option v-for="c in customers" :key="c.id" :value="c.id">{{ c.name }}</option>
+                    </select>
+                    <!-- <label>ID do Cliente</label>
+                    <input type="text" class="form-control" v-model="maintenanceForm.customerId" required /> -->
                   </div>
                   <div class="col-md-6">
-                    <label>ID do Funcionário</label>
-                    <input type="text" class="form-control" v-model="maintenanceForm.employeeId" required />
+                    <label>Funcionário</label>
+                    <select class="form-control" v-model="maintenanceForm.employeeId" required>
+                      <option disabled value="">Selecione um funcionário</option>
+                      <option v-for="e in employees" :key="e.id" :value="e.id">{{ e.name }}</option>
+                    </select>
+                    <!-- <label>ID do Funcionário</label>
+                    <input type="text" class="form-control" v-model="maintenanceForm.employeeId" required /> -->
                   </div>
                 </div>
                 <button class="btn btn-primary mt-3" type="submit">{{ buttonLabel }}</button>

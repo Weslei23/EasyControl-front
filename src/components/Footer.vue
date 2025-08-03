@@ -15,7 +15,7 @@
             Easy<tspan fill="#2D9CDB">Control</tspan>
         </text>
         </svg>
-        <p>Controle e manutenção com eficiência.</p>
+        <p>Controle de manutenção com eficiência.</p>
     </div>
     <div class="links">
         <h4>Links úteis</h4>

@@ -89,7 +89,7 @@ export default {
 <template>
   <main>
     <div class="container mt-3">
-        <button @click="showModal(null)" class="btn btn-primary" style="float: right;">Adicionar</button>
+        <button @click="showModal(null)" class="btn btn-primary" style="float: right;">Cadastrar Funcionário</button>
         <table class="table table-stripped mt-3">
             <thead>
                 <tr>

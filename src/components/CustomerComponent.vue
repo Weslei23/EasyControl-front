@@ -109,7 +109,7 @@ export default {
 <template>
   <main>
     <div class="container mt-3">
-      <button @click="showModal(null)" class="btn btn-primary" style="float: right;">Adicionar</button>
+      <button @click="showModal(null)" class="btn btn-primary" style="float: right;">Cadastrar Cliente</button>
       <table class="table table-striped mt-3">
         <thead>
           <tr>
@@ -118,7 +118,7 @@ export default {
             <th>Email</th>
             <th>Cidade</th>
             <th>Manutenções</th>
-            <th>Criado em</th>
+            <th>Cadastrado em</th>
             <th>Ações</th>
           </tr>
         </thead>

@@ -8,6 +8,12 @@ class EmployeeService {
     return axios.get(EMPLOYEE_API_BASE_URL);
   }
 
+  getEmployeeByName(name) {
+      return axios.get(`${EMPLOYEE_API_BASE_URL}/findByName`, {
+          params: { name }
+      });
+  }
+
   addEmployee(employee) {
     return axios.post(`${EMPLOYEE_API_BASE_URL}/add`, employee);
   }

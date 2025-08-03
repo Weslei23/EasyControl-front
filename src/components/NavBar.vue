@@ -28,7 +28,7 @@ export default {
                 <li class="nav-li"><RouterLink class="ancora-nav" to="/">Home</RouterLink></li>
                 <li class="nav-li"><RouterLink class="ancora-nav" to="/customer">Clientes</RouterLink></li>
                 <li class="nav-li"><RouterLink class="ancora-nav" to="/maintenance">Manutenções</RouterLink></li>
-                <li class="nav-li"><RouterLink class="ancora-nav" to="/employee">Funcionarios</RouterLink></li>
+                <li class="nav-li"><RouterLink class="ancora-nav" to="/employee">Funcionários</RouterLink></li>
                 <li class="nav-li"><RouterLink class="ancora-nav" to="/login">Entrar</RouterLink></li>
             </ul>
         </div>

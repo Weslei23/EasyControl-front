@@ -187,7 +187,6 @@ export default
                       <option disabled value="">Selecione um cliente</option>
                       <option v-for="c in customers" :key="c.id" :value="c.id">{{ c.name }}</option>
                     </select>
-                    <!-- <label>ID do Cliente</label>
                     <input type="text" class="form-control" v-model="maintenanceForm.customerId" required /> -->
                   </div>
                   <div class="col-md-6">
@@ -196,7 +195,6 @@ export default
                       <option disabled value="">Selecione um funcionário</option>
                       <option v-for="e in employees" :key="e.id" :value="e.id">{{ e.name }}</option>
                     </select>
-                    <!-- <label>ID do Funcionário</label>
                     <input type="text" class="form-control" v-model="maintenanceForm.employeeId" required /> -->
                   </div>
                 </div>
